@@ -219,6 +219,7 @@ const ChaptersSettingsSheet = ({
             backgroundColor: overlay(2, theme.surface),
             marginLeft: left,
             marginRight: right,
+            height: 240,
           },
         ]}
       >

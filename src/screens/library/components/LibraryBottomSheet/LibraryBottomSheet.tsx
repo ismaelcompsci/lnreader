@@ -240,6 +240,7 @@ const LibraryBottomSheet: React.FC<LibraryBottomSheetProps> = ({
         style={[
           styles.bottomSheetCtn,
           { backgroundColor: overlay(2, theme.surface) },
+          { height: 520 },
         ]}
       >
         <TabView
@@ -275,6 +276,7 @@ const styles = StyleSheet.create({
   tabView: {
     borderTopLeftRadius: 8,
     borderTopRightRadius: 8,
+    height: 520,
   },
   flex: { flex: 1 },
 });

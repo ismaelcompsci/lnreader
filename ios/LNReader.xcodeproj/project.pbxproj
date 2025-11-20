@@ -11,11 +11,31 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		147488B02DD8E9BD00C6D0A2 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147488AF2DD8E9BD00C6D0A2 /* Dynamic.swift */; };
 		147488B22DD8EA0700C6D0A2 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 147488B12DD8EA0700C6D0A2 /* loading.json */; };
-		147488B72DD97E8A00C6D0A2 /* RCTNativeFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147488B62DD97E8A00C6D0A2 /* RCTNativeFile.swift */; };
 		147488BC2DD9882000C6D0A2 /* RCTNativeFile.mm in Sources */ = {isa = PBXBuildFile; fileRef = 147488BB2DD9882000C6D0A2 /* RCTNativeFile.mm */; };
 		147488C02DD9A14100C6D0A2 /* RCTNativeVolumeButtonListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = 147488BF2DD9A14100C6D0A2 /* RCTNativeVolumeButtonListener.mm */; };
 		147488C42DD9A27400C6D0A2 /* RCTNativeEpubUtil.mm in Sources */ = {isa = PBXBuildFile; fileRef = 147488C32DD9A27400C6D0A2 /* RCTNativeEpubUtil.mm */; };
 		147488C82DD9A68600C6D0A2 /* RCTNativeZipArchive.mm in Sources */ = {isa = PBXBuildFile; fileRef = 147488C72DD9A68600C6D0A2 /* RCTNativeZipArchive.mm */; };
+		267D91C72EAF455D00CD798B /* index.css in Resources */ = {isa = PBXBuildFile; fileRef = 267D91AE2EAF454E00CD798B /* index.css */; };
+		267D91C82EAF455D00CD798B /* pageReader.css in Resources */ = {isa = PBXBuildFile; fileRef = 267D91AF2EAF454E00CD798B /* pageReader.css */; };
+		267D91C92EAF455D00CD798B /* toolWrapper.css in Resources */ = {isa = PBXBuildFile; fileRef = 267D91B02EAF454E00CD798B /* toolWrapper.css */; };
+		267D91CA2EAF455D00CD798B /* tts.css in Resources */ = {isa = PBXBuildFile; fileRef = 267D91B12EAF454E00CD798B /* tts.css */; };
+		267D91CB2EAF455D00CD798B /* arbutus-slab.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267D91B32EAF454E00CD798B /* arbutus-slab.ttf */; };
+		267D91CC2EAF455D00CD798B /* domine.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267D91B42EAF454E00CD798B /* domine.ttf */; };
+		267D91CD2EAF455D00CD798B /* lato.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267D91B52EAF454E00CD798B /* lato.ttf */; };
+		267D91CE2EAF455D00CD798B /* lora.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267D91B62EAF454E00CD798B /* lora.ttf */; };
+		267D91CF2EAF455D00CD798B /* noto-sans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267D91B72EAF454E00CD798B /* noto-sans.ttf */; };
+		267D91D02EAF455D00CD798B /* nunito.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267D91B82EAF454E00CD798B /* nunito.ttf */; };
+		267D91D12EAF455D00CD798B /* open-sans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267D91B92EAF454E00CD798B /* open-sans.ttf */; };
+		267D91D22EAF455D00CD798B /* OpenDyslexic3-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267D91BA2EAF454E00CD798B /* OpenDyslexic3-Regular.ttf */; };
+		267D91D32EAF455D00CD798B /* pt-sans-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267D91BB2EAF454E00CD798B /* pt-sans-bold.ttf */; };
+		267D91D42EAF455D00CD798B /* pt-serif.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267D91BC2EAF454E00CD798B /* pt-serif.ttf */; };
+		267D91D52EAF455D00CD798B /* core.js in Resources */ = {isa = PBXBuildFile; fileRef = 267D91BE2EAF454E00CD798B /* core.js */; };
+		267D91D62EAF455D00CD798B /* icons.js in Resources */ = {isa = PBXBuildFile; fileRef = 267D91BF2EAF454E00CD798B /* icons.js */; };
+		267D91D72EAF455D00CD798B /* index.js in Resources */ = {isa = PBXBuildFile; fileRef = 267D91C02EAF454E00CD798B /* index.js */; };
+		267D91D82EAF455D00CD798B /* index.d.ts in Resources */ = {isa = PBXBuildFile; fileRef = 267D91C12EAF454E00CD798B /* index.d.ts */; };
+		267D91D92EAF455D00CD798B /* text-vibe.js in Resources */ = {isa = PBXBuildFile; fileRef = 267D91C22EAF454E00CD798B /* text-vibe.js */; };
+		267D91DA2EAF455D00CD798B /* van.js in Resources */ = {isa = PBXBuildFile; fileRef = 267D91C32EAF454E00CD798B /* van.js */; };
+		267D91DB2EAF455D00CD798B /* van.d.ts in Resources */ = {isa = PBXBuildFile; fileRef = 267D91C42EAF454E00CD798B /* van.d.ts */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		A1FA4E89FDA7CFAD14C43693 /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F74819B237E0768BB72DED8 /* ExpoModulesProvider.swift */; };
@@ -30,7 +50,6 @@
 		147488AA2DD8E7DE00C6D0A2 /* LNReader-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "LNReader-Bridging-Header.h"; path = "LNReader/LNReader-Bridging-Header.h"; sourceTree = "<group>"; };
 		147488AF2DD8E9BD00C6D0A2 /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
 		147488B12DD8EA0700C6D0A2 /* loading.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
-		147488B62DD97E8A00C6D0A2 /* RCTNativeFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCTNativeFile.swift; sourceTree = "<group>"; };
 		147488BA2DD9882000C6D0A2 /* RCTNativeFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTNativeFile.h; sourceTree = "<group>"; };
 		147488BB2DD9882000C6D0A2 /* RCTNativeFile.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RCTNativeFile.mm; sourceTree = "<group>"; };
 		147488BE2DD9A14100C6D0A2 /* RCTNativeVolumeButtonListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTNativeVolumeButtonListener.h; sourceTree = "<group>"; };
@@ -40,6 +59,27 @@
 		147488C62DD9A68600C6D0A2 /* RCTNativeZipArchive.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTNativeZipArchive.h; sourceTree = "<group>"; };
 		147488C72DD9A68600C6D0A2 /* RCTNativeZipArchive.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RCTNativeZipArchive.mm; sourceTree = "<group>"; };
 		1F74819B237E0768BB72DED8 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-LNReader/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
+		267D91AE2EAF454E00CD798B /* index.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = index.css; sourceTree = "<group>"; };
+		267D91AF2EAF454E00CD798B /* pageReader.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = pageReader.css; sourceTree = "<group>"; };
+		267D91B02EAF454E00CD798B /* toolWrapper.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = toolWrapper.css; sourceTree = "<group>"; };
+		267D91B12EAF454E00CD798B /* tts.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = tts.css; sourceTree = "<group>"; };
+		267D91B32EAF454E00CD798B /* arbutus-slab.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "arbutus-slab.ttf"; sourceTree = "<group>"; };
+		267D91B42EAF454E00CD798B /* domine.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = domine.ttf; sourceTree = "<group>"; };
+		267D91B52EAF454E00CD798B /* lato.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = lato.ttf; sourceTree = "<group>"; };
+		267D91B62EAF454E00CD798B /* lora.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = lora.ttf; sourceTree = "<group>"; };
+		267D91B72EAF454E00CD798B /* noto-sans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "noto-sans.ttf"; sourceTree = "<group>"; };
+		267D91B82EAF454E00CD798B /* nunito.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = nunito.ttf; sourceTree = "<group>"; };
+		267D91B92EAF454E00CD798B /* open-sans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "open-sans.ttf"; sourceTree = "<group>"; };
+		267D91BA2EAF454E00CD798B /* OpenDyslexic3-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenDyslexic3-Regular.ttf"; sourceTree = "<group>"; };
+		267D91BB2EAF454E00CD798B /* pt-sans-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pt-sans-bold.ttf"; sourceTree = "<group>"; };
+		267D91BC2EAF454E00CD798B /* pt-serif.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pt-serif.ttf"; sourceTree = "<group>"; };
+		267D91BE2EAF454E00CD798B /* core.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = core.js; sourceTree = "<group>"; };
+		267D91BF2EAF454E00CD798B /* icons.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = icons.js; sourceTree = "<group>"; };
+		267D91C02EAF454E00CD798B /* index.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
+		267D91C12EAF454E00CD798B /* index.d.ts */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.typescript; path = index.d.ts; sourceTree = "<group>"; };
+		267D91C22EAF454E00CD798B /* text-vibe.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "text-vibe.js"; sourceTree = "<group>"; };
+		267D91C32EAF454E00CD798B /* van.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = van.js; sourceTree = "<group>"; };
+		267D91C42EAF454E00CD798B /* van.d.ts */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.typescript; path = van.d.ts; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-LNReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LNReader.debug.xcconfig"; path = "Target Support Files/Pods-LNReader/Pods-LNReader.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-LNReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LNReader.release.xcconfig"; path = "Target Support Files/Pods-LNReader/Pods-LNReader.release.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-LNReader.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LNReader.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,7 +111,6 @@
 				13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */,
 				147488AA2DD8E7DE00C6D0A2 /* LNReader-Bridging-Header.h */,
 				147488AF2DD8E9BD00C6D0A2 /* Dynamic.swift */,
-				147488B62DD97E8A00C6D0A2 /* RCTNativeFile.swift */,
 			);
 			name = LNReader;
 			sourceTree = "<group>";
@@ -120,6 +159,59 @@
 			name = ExpoModulesProviders;
 			sourceTree = "<group>";
 		};
+		267D91B22EAF454E00CD798B /* css */ = {
+			isa = PBXGroup;
+			children = (
+				267D91AE2EAF454E00CD798B /* index.css */,
+				267D91AF2EAF454E00CD798B /* pageReader.css */,
+				267D91B02EAF454E00CD798B /* toolWrapper.css */,
+				267D91B12EAF454E00CD798B /* tts.css */,
+			);
+			path = css;
+			sourceTree = "<group>";
+		};
+		267D91BD2EAF454E00CD798B /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				267D91B32EAF454E00CD798B /* arbutus-slab.ttf */,
+				267D91B42EAF454E00CD798B /* domine.ttf */,
+				267D91B52EAF454E00CD798B /* lato.ttf */,
+				267D91B62EAF454E00CD798B /* lora.ttf */,
+				267D91B72EAF454E00CD798B /* noto-sans.ttf */,
+				267D91B82EAF454E00CD798B /* nunito.ttf */,
+				267D91B92EAF454E00CD798B /* open-sans.ttf */,
+				267D91BA2EAF454E00CD798B /* OpenDyslexic3-Regular.ttf */,
+				267D91BB2EAF454E00CD798B /* pt-sans-bold.ttf */,
+				267D91BC2EAF454E00CD798B /* pt-serif.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		267D91C52EAF454E00CD798B /* js */ = {
+			isa = PBXGroup;
+			children = (
+				267D91BE2EAF454E00CD798B /* core.js */,
+				267D91BF2EAF454E00CD798B /* icons.js */,
+				267D91C02EAF454E00CD798B /* index.js */,
+				267D91C12EAF454E00CD798B /* index.d.ts */,
+				267D91C22EAF454E00CD798B /* text-vibe.js */,
+				267D91C32EAF454E00CD798B /* van.js */,
+				267D91C42EAF454E00CD798B /* van.d.ts */,
+			);
+			path = js;
+			sourceTree = "<group>";
+		};
+		267D91C62EAF454E00CD798B /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				267D91B22EAF454E00CD798B /* css */,
+				267D91BD2EAF454E00CD798B /* fonts */,
+				267D91C52EAF454E00CD798B /* js */,
+			);
+			name = assets;
+			path = ../android/app/src/main/assets;
+			sourceTree = "<group>";
+		};
 		28BBFC4322E6EFCA529574FE /* LNReader */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +239,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				267D91C62EAF454E00CD798B /* assets */,
 				147488C52DD9A66F00C6D0A2 /* NativeZipArchive */,
 				147488C12DD9A25E00C6D0A2 /* NativeEpubUtil */,
 				147488BD2DD9A0E900C6D0A2 /* NativeVolumeButtonListener */,
@@ -241,6 +334,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				267D91C72EAF455D00CD798B /* index.css in Resources */,
+				267D91C82EAF455D00CD798B /* pageReader.css in Resources */,
+				267D91C92EAF455D00CD798B /* toolWrapper.css in Resources */,
+				267D91CA2EAF455D00CD798B /* tts.css in Resources */,
+				267D91CB2EAF455D00CD798B /* arbutus-slab.ttf in Resources */,
+				267D91CC2EAF455D00CD798B /* domine.ttf in Resources */,
+				267D91CD2EAF455D00CD798B /* lato.ttf in Resources */,
+				267D91CE2EAF455D00CD798B /* lora.ttf in Resources */,
+				267D91CF2EAF455D00CD798B /* noto-sans.ttf in Resources */,
+				267D91D02EAF455D00CD798B /* nunito.ttf in Resources */,
+				267D91D12EAF455D00CD798B /* open-sans.ttf in Resources */,
+				267D91D22EAF455D00CD798B /* OpenDyslexic3-Regular.ttf in Resources */,
+				267D91D32EAF455D00CD798B /* pt-sans-bold.ttf in Resources */,
+				267D91D42EAF455D00CD798B /* pt-serif.ttf in Resources */,
+				267D91D52EAF455D00CD798B /* core.js in Resources */,
+				267D91D62EAF455D00CD798B /* icons.js in Resources */,
+				267D91D72EAF455D00CD798B /* index.js in Resources */,
+				267D91D82EAF455D00CD798B /* index.d.ts in Resources */,
+				267D91D92EAF455D00CD798B /* text-vibe.js in Resources */,
+				267D91DA2EAF455D00CD798B /* van.js in Resources */,
+				267D91DB2EAF455D00CD798B /* van.d.ts in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				147488B22DD8EA0700C6D0A2 /* loading.json in Resources */,
@@ -275,9 +389,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-LNReader/Pods-LNReader-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-LNReader/Pods-LNReader-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -314,9 +432,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-LNReader/Pods-LNReader-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-LNReader/Pods-LNReader-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -332,11 +454,15 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
+				"$(SRCROOT)/.xcode.env",
+				"$(SRCROOT)/.xcode.env.local",
+				"$(SRCROOT)/Pods/Target Support Files/Pods-LNReader/expo-configure-project.sh",
 			);
 			name = "[Expo] Configure project";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"$(SRCROOT)/Pods/Target Support Files/Pods-LNReader/ExpoModulesProvider.swift",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -353,7 +479,6 @@
 				147488B02DD8E9BD00C6D0A2 /* Dynamic.swift in Sources */,
 				761780ED2CA45674006654EE /* AppDelegate.swift in Sources */,
 				147488BC2DD9882000C6D0A2 /* RCTNativeFile.mm in Sources */,
-				147488B72DD97E8A00C6D0A2 /* RCTNativeFile.swift in Sources */,
 				147488C82DD9A68600C6D0A2 /* RCTNativeZipArchive.mm in Sources */,
 				A1FA4E89FDA7CFAD14C43693 /* ExpoModulesProvider.swift in Sources */,
 				147488C42DD9A27400C6D0A2 /* RCTNativeEpubUtil.mm in Sources */,
@@ -371,6 +496,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KAQ4BZHY96;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = LNReader/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
@@ -402,6 +528,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KAQ4BZHY96;
 				INFOPLIST_FILE = LNReader/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -493,7 +620,7 @@
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
 				OTHER_LDFLAGS = "$(inherited)  ";
-				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/.pnpm/react-native@0.81.5_@babel+core@7.28.4_@react-native-community+cli@20.0.2_typescript@5.9.3__@_puthvmm5yyl7dkaoybnpvynbnq/node_modules/react-native";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
 				USE_HERMES = true;
@@ -562,7 +689,7 @@
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
 				OTHER_LDFLAGS = "$(inherited)  ";
-				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/.pnpm/react-native@0.81.5_@babel+core@7.28.4_@react-native-community+cli@20.0.2_typescript@5.9.3__@_puthvmm5yyl7dkaoybnpvynbnq/node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;
 				VALIDATE_PRODUCT = YES;

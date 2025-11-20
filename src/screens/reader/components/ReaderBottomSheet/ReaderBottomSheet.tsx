@@ -200,6 +200,7 @@ export default React.memo(ReaderBottomSheetV2);
 const styles = StyleSheet.create({
   container: {
     borderRadius: 8,
+    flex: 1,
   },
   readerTab: {
     paddingVertical: 8,
@@ -211,6 +212,7 @@ const styles = StyleSheet.create({
   tabView: {
     borderTopLeftRadius: 8,
     borderTopRightRadius: 8,
+    height: 600,
   },
   flex: { flex: 1 },
 });

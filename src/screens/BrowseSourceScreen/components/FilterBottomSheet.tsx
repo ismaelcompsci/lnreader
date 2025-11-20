@@ -8,11 +8,7 @@ import {
 } from 'react-native';
 
 import BottomSheet from '@components/BottomSheet/BottomSheet';
-import {
-  BottomSheetFlatList,
-  BottomSheetModal,
-  BottomSheetView,
-} from '@gorhom/bottom-sheet';
+import { BottomSheetFlatList, BottomSheetModal } from '@gorhom/bottom-sheet';
 
 import { useTheme } from '@hooks/persisted';
 import {
@@ -108,33 +104,31 @@ const FilterItem: React.FC<FilterItemProps> = ({
           style={styles.flex}
           visible={isVisible}
           contentStyle={{ backgroundColor: theme.surfaceVariant }}
+          anchorPosition="bottom"
           anchor={
-            <Pressable
-              style={[styles.flex, { width: screenWidth - 48 }]}
+            <TextInput
               onPress={toggleCard}
-            >
-              <TextInput
-                mode="outlined"
-                label={
-                  <Text
-                    style={[
-                      styles.label,
-                      {
-                        color: isVisible ? theme.primary : theme.onSurface,
-                        backgroundColor: overlay(2, theme.surface),
-                      },
-                    ]}
-                  >
-                    {` ${filter.label} `}
-                  </Text>
-                }
-                value={label}
-                editable={false}
-                theme={{ colors: { background: 'transparent' } }}
-                outlineColor={isVisible ? theme.primary : theme.onSurface}
-                textColor={isVisible ? theme.primary : theme.onSurface}
-              />
-            </Pressable>
+              mode="outlined"
+              style={[styles.flex, { width: screenWidth - 48 }]}
+              label={
+                <Text
+                  style={[
+                    styles.label,
+                    {
+                      color: isVisible ? theme.primary : theme.onSurface,
+                      backgroundColor: overlay(2, theme.surface),
+                    },
+                  ]}
+                >
+                  {` ${filter.label} `}
+                </Text>
+              }
+              value={label}
+              editable={false}
+              theme={{ colors: { background: 'transparent' } }}
+              outlineColor={isVisible ? theme.primary : theme.onSurface}
+              textColor={isVisible ? theme.primary : theme.onSurface}
+            />
           }
           onDismiss={closeCard}
         >
@@ -354,34 +348,43 @@ const FilterBottomSheet: React.FC<BottomSheetProps> = ({
   return (
     <BottomSheet
       bottomSheetRef={filterSheetRef}
-      snapPoints={[400, 600]}
+      snapPoints={[400]}
       bottomInset={bottom}
       backgroundStyle={styles.transparent}
       style={[styles.container, { backgroundColor: overlay(2, theme.surface) }]}
+      footerComponent={() => {
+        return (
+          <View
+            style={[
+              styles.buttonContainer,
+              { borderBottomColor: theme.outline },
+            ]}
+          >
+            <Button
+              title={getString('common.reset')}
+              onPress={() => {
+                setSelectedFilters(filters);
+                clearFilters(filters);
+              }}
+            />
+            <Button
+              title={getString('common.filter')}
+              textColor={theme.onPrimary}
+              onPress={() => {
+                setFilters(selectedFilters);
+                filterSheetRef?.current?.close();
+              }}
+              mode="contained"
+            />
+          </View>
+        );
+      }}
     >
-      <BottomSheetView
-        style={[styles.buttonContainer, { borderBottomColor: theme.outline }]}
-      >
-        <Button
-          title={getString('common.reset')}
-          onPress={() => {
-            setSelectedFilters(filters);
-            clearFilters(filters);
-          }}
-        />
-        <Button
-          title={getString('common.filter')}
-          textColor={theme.onPrimary}
-          onPress={() => {
-            setFilters(selectedFilters);
-            filterSheetRef?.current?.close();
-          }}
-          mode="contained"
-        />
-      </BottomSheetView>
       <BottomSheetFlatList
         data={filters && Object.entries(filters)}
+        // @ts-ignore
         keyExtractor={item => 'filter' + item[0]}
+        // @ts-ignore
         renderItem={({ item }) => (
           <FilterItem
             theme={theme}
@@ -405,10 +408,9 @@ const styles = StyleSheet.create({
   },
   buttonContainer: {
     alignItems: 'center',
-    borderBottomWidth: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    paddingBottom: 8,
+    paddingBottom: 12,
     paddingHorizontal: 24,
     paddingTop: 8,
   },

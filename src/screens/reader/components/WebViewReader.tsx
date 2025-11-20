@@ -20,6 +20,7 @@ import { getBatteryLevelSync } from 'react-native-device-info';
 import * as Speech from 'expo-speech';
 import { PLUGIN_STORAGE } from '@utils/Storages';
 import { useChapterContext } from '../ChapterContext';
+import { Paths } from 'expo-file-system';
 
 type WebViewPostEvent = {
   type: string;
@@ -44,8 +45,8 @@ const { RNDeviceInfo } = NativeModules;
 const deviceInfoEmitter = new NativeEventEmitter(RNDeviceInfo);
 
 const assetsUriPrefix = __DEV__
-  ? 'http://localhost:8081/assets'
-  : 'file:///android_asset';
+  ? Paths.bundle.uri.slice(0, -1)
+  : Paths.bundle.uri.slice(0, -1);
 
 const WebViewReader: React.FC<WebViewReaderProps> = ({ onPress }) => {
   const {
@@ -163,7 +164,7 @@ const WebViewReader: React.FC<WebViewReaderProps> = ({ onPress }) => {
         }
       }}
       source={{
-        baseUrl: !chapter.isDownloaded ? plugin?.site : undefined,
+        baseUrl: assetsUriPrefix,
         headers: plugin?.imageRequestInit?.headers,
         method: plugin?.imageRequestInit?.method,
         body: plugin?.imageRequestInit?.body,
@@ -172,10 +173,10 @@ const WebViewReader: React.FC<WebViewReaderProps> = ({ onPress }) => {
           <html>
             <head>
               <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-              <link rel="stylesheet" href="${assetsUriPrefix}/css/index.css">
-              <link rel="stylesheet" href="${assetsUriPrefix}/css/pageReader.css">
-              <link rel="stylesheet" href="${assetsUriPrefix}/css/toolWrapper.css">
-              <link rel="stylesheet" href="${assetsUriPrefix}/css/tts.css">
+              <link rel="stylesheet" href="${assetsUriPrefix}/index.css">
+              <link rel="stylesheet" href="${assetsUriPrefix}/pageReader.css">
+              <link rel="stylesheet" href="${assetsUriPrefix}/toolWrapper.css">
+              <link rel="stylesheet" href="${assetsUriPrefix}/tts.css">
               <style>
               :root {
                 --StatusBar-currentHeight: ${StatusBar.currentHeight}px;
@@ -256,11 +257,11 @@ const WebViewReader: React.FC<WebViewReaderProps> = ({ onPress }) => {
                   },
                 })}
               </script>
-              <script src="${assetsUriPrefix}/js/icons.js"></script>
-              <script src="${assetsUriPrefix}/js/van.js"></script>
-              <script src="${assetsUriPrefix}/js/text-vibe.js"></script>
-              <script src="${assetsUriPrefix}/js/core.js"></script>
-              <script src="${assetsUriPrefix}/js/index.js"></script>
+              <script src="${assetsUriPrefix}/icons.js"></script>
+              <script src="${assetsUriPrefix}/van.js"></script>
+              <script src="${assetsUriPrefix}/text-vibe.js"></script>
+              <script src="${assetsUriPrefix}/core.js"></script>
+              <script src="${assetsUriPrefix}/index.js"></script>
               <script src="${pluginCustomJS}"></script>
               <script>
                 ${readerSettings.customJS}

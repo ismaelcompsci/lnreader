@@ -103,9 +103,9 @@ const FilterItem: React.FC<FilterItemProps> = ({
           style={styles.flex}
           visible={isVisible}
           contentStyle={{ backgroundColor: theme.surfaceVariant }}
-          anchorPosition="bottom"
           anchor={
-            <TextInput
+            <Pressable
+              style={[styles.flex, { width: screenWidth - 48 }]}
               onPress={toggleCard}
             >
               <TextInput

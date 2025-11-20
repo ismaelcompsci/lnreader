@@ -66,7 +66,6 @@ const FilterItem: React.FC<FilterItemProps> = ({
           label={
             <Text
               style={[
-                styles.label,
                 {
                   color: theme.onSurface,
                   backgroundColor: overlay(2, theme.surface),
@@ -108,27 +107,28 @@ const FilterItem: React.FC<FilterItemProps> = ({
           anchor={
             <TextInput
               onPress={toggleCard}
-              mode="outlined"
-              style={[styles.flex, { width: screenWidth - 48 }]}
-              label={
-                <Text
-                  style={[
-                    styles.label,
-                    {
-                      color: isVisible ? theme.primary : theme.onSurface,
-                      backgroundColor: overlay(2, theme.surface),
-                    },
-                  ]}
-                >
-                  {` ${filter.label} `}
-                </Text>
-              }
-              value={label}
-              editable={false}
-              theme={{ colors: { background: 'transparent' } }}
-              outlineColor={isVisible ? theme.primary : theme.onSurface}
-              textColor={isVisible ? theme.primary : theme.onSurface}
-            />
+            >
+              <TextInput
+                mode="outlined"
+                label={
+                  <Text
+                    style={[
+                      {
+                        color: isVisible ? theme.primary : theme.onSurface,
+                        backgroundColor: overlay(2, theme.surface),
+                      },
+                    ]}
+                  >
+                    {` ${filter.label} `}
+                  </Text>
+                }
+                value={label}
+                editable={false}
+                theme={{ colors: { background: 'transparent' } }}
+                outlineColor={isVisible ? theme.primary : theme.onSurface}
+                textColor={isVisible ? theme.primary : theme.onSurface}
+              />
+            </Pressable>
           }
           onDismiss={closeCard}
         >
@@ -164,7 +164,7 @@ const FilterItem: React.FC<FilterItemProps> = ({
           onPress={toggleCard}
           android_ripple={{ color: theme.rippleColor }}
         >
-          <Text style={[styles.label, { color: theme.onSurfaceVariant }]}>
+          <Text style={[{ color: theme.onSurfaceVariant }]}>
             {filter.label}
           </Text>
           <MaterialCommunityIcons
@@ -244,7 +244,7 @@ const FilterItem: React.FC<FilterItemProps> = ({
           onPress={toggleCard}
           android_ripple={{ color: theme.rippleColor }}
         >
-          <Text style={[styles.label, { color: theme.onSurfaceVariant }]}>
+          <Text style={[{ color: theme.onSurfaceVariant }]}>
             {filter.label}
           </Text>
           <MaterialCommunityIcons
@@ -352,33 +352,28 @@ const FilterBottomSheet: React.FC<BottomSheetProps> = ({
       bottomInset={bottom}
       backgroundStyle={styles.transparent}
       style={[styles.container, { backgroundColor: overlay(2, theme.surface) }]}
-      footerComponent={() => {
-        return (
-          <View
-            style={[
-              styles.buttonContainer,
-              { borderBottomColor: theme.outline },
-            ]}
-          >
-            <Button
-              title={getString('common.reset')}
-              onPress={() => {
-                setSelectedFilters(filters);
-                clearFilters(filters);
-              }}
-            />
-            <Button
-              title={getString('common.filter')}
-              textColor={theme.onPrimary}
-              onPress={() => {
-                setFilters(selectedFilters);
-                filterSheetRef?.current?.close();
-              }}
-              mode="contained"
-            />
-          </View>
-        );
-      }}
+      handleComponent={() => (
+        <View
+          style={[styles.buttonContainer, { borderBottomColor: theme.outline }]}
+        >
+          <Button
+            title={getString('common.reset')}
+            onPress={() => {
+              setSelectedFilters(filters);
+              clearFilters(filters);
+            }}
+          />
+          <Button
+            title={getString('common.filter')}
+            textColor={theme.onPrimary}
+            onPress={() => {
+              setFilters(selectedFilters);
+              filterSheetRef?.current?.close();
+            }}
+            mode="contained"
+          />
+        </View>
+      )}
     >
       <BottomSheetFlatList
         data={filters && Object.entries(filters)}
@@ -426,10 +421,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 8,
     flex: 1,
   },
-  label: {
-    fontSize: 16,
-    fontWeight: 'bold',
-  },
+
   picker: {
     paddingHorizontal: 24,
     width: 200,

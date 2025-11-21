@@ -7,7 +7,7 @@ import {
   keepLocalCopy,
 } from '@react-native-documents/picker';
 import { CACHE_DIR_PATH, prepareBackupData, restoreData } from '../utils';
-import NativeZipArchive from '@specs/NativeZipArchive';
+import { unzip, zip } from 'react-native-zip-archive';
 import { ROOT_STORAGE } from '@utils/Storages';
 import { ZipBackupName } from '../types';
 import NativeFile from '@specs/NativeFile';
@@ -38,10 +38,7 @@ export const createBackup = async (
 
     await sleep(200);
 
-    await NativeZipArchive.zip(
-      ROOT_STORAGE,
-      CACHE_DIR_PATH + '/' + ZipBackupName.DOWNLOAD,
-    );
+    await zip(ROOT_STORAGE, CACHE_DIR_PATH + '/' + ZipBackupName.DOWNLOAD);
 
     setMeta?.(meta => ({
       ...meta,
@@ -51,7 +48,7 @@ export const createBackup = async (
 
     await sleep(200);
 
-    await NativeZipArchive.zip(CACHE_DIR_PATH, CACHE_DIR_PATH + '.zip');
+    await zip(CACHE_DIR_PATH, CACHE_DIR_PATH + '.zip');
 
     setMeta?.(meta => ({
       ...meta,
@@ -131,7 +128,7 @@ export const restoreBackup = async (
 
     await sleep(200);
 
-    await NativeZipArchive.unzip(localPath, CACHE_DIR_PATH);
+    await unzip(localPath, CACHE_DIR_PATH);
 
     setMeta?.(meta => ({
       ...meta,
@@ -152,10 +149,7 @@ export const restoreBackup = async (
     await sleep(200);
 
     // TODO: unlink here too?
-    await NativeZipArchive.unzip(
-      CACHE_DIR_PATH + '/' + ZipBackupName.DOWNLOAD,
-      ROOT_STORAGE,
-    );
+    await unzip(CACHE_DIR_PATH + '/' + ZipBackupName.DOWNLOAD, ROOT_STORAGE);
 
     setMeta?.(meta => ({
       ...meta,

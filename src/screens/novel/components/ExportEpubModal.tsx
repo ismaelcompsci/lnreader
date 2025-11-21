@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { TextInput, Text } from 'react-native-paper';
-import { openDocumentTree } from 'react-native-saf-x';
-
+import { pickDirectory } from '@react-native-documents/picker';
 import { Button, List, Modal, SwitchItem } from '@components';
 
 import { useBoolean } from '@hooks';
@@ -83,7 +82,7 @@ const ExportEpubModal: React.FC<ExportEpubModalProps> = ({
 
   const openFolderPicker = async () => {
     try {
-      const resultUri = await openDocumentTree(true);
+      const resultUri = await pickDirectory();
       if (resultUri) {
         setUri(resultUri.uri);
       }
